@@ -1,0 +1,33 @@
+import { Theme } from "theme.slint";
+
+export component Heating inherits HorizontalLayout {
+    in-out property <int> value: 0;
+    spacing: 5px;
+    Rectangle {
+        private property <int> index: 1;
+        border-width: 1.5px;
+        border-color: root.value < index ? white : Theme.heating-active;
+        border-radius: 5px;
+        background: root.value < index ? transparent : Theme.heating-active;
+
+        animate background, border-color { duration: 250ms; }
+    }
+
+    Rectangle {
+        private property <int> index: 2;
+        border-width: 1.5px;
+        border-color: root.value < index ? white : Theme.heating-active;
+        border-radius: 5px;
+        background: root.value < index ? transparent : Theme.heating-active;
+        animate background, border-color { duration: 250ms; }
+    }
+
+    Rectangle {
+        private property <int> index: 3;
+        border-width: 1.5px;
+        border-color: root.value < index ? white : Theme.heating-active;
+        border-radius: 5px;
+        background: root.value < index ? transparent : Theme.heating-active;
+        animate background, border-color { duration: 250ms; }
+    }
+}

@@ -1,0 +1,13 @@
+import { Theme } from "theme.slint";
+
+export component Temperature inherits Rectangle {
+    in-out property <int> temperature: 25;
+
+    Text {
+        text: root.temperature;
+        font-size: 64px;
+        color: Theme.foreground;
+        vertical-alignment: TextVerticalAlignment.center;
+        horizontal-alignment: TextHorizontalAlignment.center;
+    }
+}

@@ -1,0 +1,32 @@
+import { Theme } from "theme.slint";
+import { Climate } from "climate.slint";
+
+export component MainWindow inherits Window {
+    width: 135px;
+    height: 240px;
+    forward-focus: my-key-handler;
+    my-key-handler := FocusScope {
+        enabled: true;
+        key-pressed(event) => {
+            if (event.text == Key.DownArrow) {
+                climate.temperature = Math.max(10, climate.temperature - 1);
+            }
+            if (event.text == Key.UpArrow) {
+                climate.temperature = Math.min(28, climate.temperature + 1);
+            }
+            if (event.text == Key.LeftArrow) {
+                climate.heating = Math.max(0, climate.heating - 1);
+            }
+            if (event.text == Key.RightArrow) {
+                climate.heating = Math.min(3, climate.heating + 1);
+            }
+            accept
+        }
+    }
+
+    background: Theme.window-background;
+    climate := Climate {
+        width: 100%;
+        height: 100%;
+    }
+}

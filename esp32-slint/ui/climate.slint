@@ -1,0 +1,44 @@
+import { Theme } from "theme.slint";
+import { Temperature } from "temperature.slint";
+import { Heating } from "heating.slint";
+
+export component Climate inherits Rectangle {
+    in-out property <int> temperature: 25;
+    in-out property <bool> is-auto: true;
+    in-out property <int> heating: 0;
+
+    Rectangle {
+        background: Theme.heating-cold;
+    }
+
+    Rectangle {
+        background: Theme.heating-warm;
+        opacity: (root.temperature - 10) / 18;
+        animate opacity { duration: 250ms; }
+    }
+
+    VerticalLayout {
+        alignment: center;
+        spacing: 10px;
+        Temperature {
+            temperature: root.temperature;
+        }
+
+        Text {
+            visible: root.is-auto;
+            text: "AUTO";
+            font-size: 24px;
+            font-weight: 500;
+            color: Theme.foreground;
+            horizontal-alignment: TextHorizontalAlignment.center;
+        }
+
+        Rectangle {
+            height: 18px;
+            Heating {
+                value: root.heating;
+                width: 110px;
+            }
+        }
+    }
+}
