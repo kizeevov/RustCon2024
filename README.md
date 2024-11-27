@@ -1,8 +1,12 @@
 # RustCon2024
 
-## Презентация
+## Presentation
 
-## Проект EPS32
+[Yandex Disk](https://disk.yandex.ru/d/sCgx-MSavBgSdw)
+
+## EPS32 Project
+
+[This GitHub Repository](https://github.com/kizeevov/RustCon2024/blob/main/esp32-slint/README.md)
 
 ## Car Dashboard
 

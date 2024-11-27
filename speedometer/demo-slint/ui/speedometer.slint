@@ -1,0 +1,218 @@
+import { Theme } from "theme.slint";
+
+export component Speedometer inherits Rectangle {
+    in property <int> speed: 0;
+    in property <int> max-speed: 180;
+
+    property <length> size: min(root.width, root.height);
+    property <length> radius: root.size / 2.0;
+    property <length> center_x: root.width / 2.0;
+    property <length> center_y: root.height / 2.0;
+
+    Path {
+        stroke: Theme.border;
+        stroke-width: 9px;
+        fill: Theme.background-regular;
+        viewbox-x: 0;
+        viewbox-y: 0;
+        viewbox-width: 648;
+        viewbox-height: 648;
+        commands: "M324 648C502.94 648 648 502.94 648 324C648 145.06 502.94 0 324 0C145.06 0 0 145.06 0 324C0 502.94 145.06 648 324 648Z";
+    }
+
+    Path {
+        fill: Theme.foreground;
+        viewbox-x: 0;
+        viewbox-y: 0;
+        viewbox-width: 648;
+        viewbox-height: 648;
+        commands: "M132.051 509.558L114.232 527.377C112.826 528.783 112.826 531.062 114.232 532.468C115.638 533.874 117.917 533.874 119.323 532.468L137.142 514.649C138.548 513.243 138.548 510.964 137.142 509.558C135.736 508.152 133.457 508.152 132.051 509.558Z";
+    }
+
+    Path {
+        fill: Theme.foreground;
+        viewbox-x: 0;
+        viewbox-y: 0;
+        viewbox-width: 648;
+        viewbox-height: 648;
+        commands: "M85.3061 455.4L68.1588 465.3C67.2979 465.797 67.0029 466.898 67.5 467.759C67.997 468.62 69.0979 468.915 69.9588 468.418L87.1061 458.518C87.9671 458.021 88.262 456.92 87.765 456.059C87.2679 455.198 86.1671 454.903 85.3061 455.4Z";
+    }
+
+    Path {
+        fill: Theme.foreground;
+        viewbox-x: 0;
+        viewbox-y: 0;
+        viewbox-width: 648;
+        viewbox-height: 648;
+        commands: "M49.5 318.6H29.7C28.7059 318.6 27.9 319.406 27.9 320.4C27.9 321.394 28.7059 322.2 29.7 322.2H49.5C50.4941 322.2 51.3 321.394 51.3 320.4C51.3 319.406 50.4941 318.6 49.5 318.6Z";
+    }
+
+    Path {
+        fill: Theme.foreground;
+        viewbox-x: 0;
+        viewbox-y: 0;
+        viewbox-width: 648;
+        viewbox-height: 648;
+        commands: "M40.3559 252.989L64.6972 259.511C66.6177 260.026 68.5917 258.886 69.1063 256.966C69.6209 255.045 68.4812 253.071 66.5607 252.556L42.2194 246.034C40.2989 245.52 38.3249 246.659 37.8103 248.58C37.2957 250.5 38.4354 252.474 40.3559 252.989Z";
+    }
+
+    Path {
+        fill: Theme.foreground;
+        viewbox-x: 0;
+        viewbox-y: 0;
+        viewbox-width: 648;
+        viewbox-height: 648;
+        commands: "M65.2574 389.682L40.9161 396.204C38.9956 396.719 37.8559 398.693 38.3705 400.613C38.8851 402.534 40.8591 403.673 42.7796 403.159L67.1209 396.636C69.0414 396.122 70.1811 394.148 69.6665 392.227C69.1519 390.307 67.1779 389.167 65.2574 389.682Z";
+    }
+
+    Path {
+        fill: Theme.foreground;
+        viewbox-x: 0;
+        viewbox-y: 0;
+        viewbox-width: 648;
+        viewbox-height: 648;
+        commands: "M602.506 245.726L578.164 252.248C576.244 252.763 575.104 254.737 575.619 256.657C576.133 258.578 578.107 259.717 580.028 259.203L604.369 252.681C606.29 252.166 607.429 250.192 606.915 248.272C606.4 246.351 604.426 245.211 602.506 245.726Z";
+    }
+
+    Path {
+        fill: Theme.foreground;
+        viewbox-x: 0;
+        viewbox-y: 0;
+        viewbox-width: 648;
+        viewbox-height: 648;
+        commands: "M525.344 116.265L507.525 134.084C506.119 135.49 506.119 137.77 507.525 139.175C508.931 140.581 511.21 140.581 512.616 139.175L530.435 121.356C531.841 119.95 531.841 117.671 530.435 116.265C529.029 114.859 526.75 114.859 525.344 116.265Z";
+    }
+
+    Path {
+        fill: Theme.foreground;
+        viewbox-x: 0;
+        viewbox-y: 0;
+        viewbox-width: 648;
+        viewbox-height: 648;
+        commands: "M394.096 42.1555L387.574 66.4968C387.059 68.4173 388.199 70.3913 390.119 70.9059C392.04 71.4205 394.014 70.2808 394.528 68.3603L401.051 44.019C401.565 42.0985 400.425 40.1245 398.505 39.6099C396.584 39.0953 394.61 40.235 394.096 42.1555Z";
+    }
+
+    Path {
+        fill: Theme.foreground;
+        viewbox-x: 0;
+        viewbox-y: 0;
+        viewbox-width: 648;
+        viewbox-height: 648;
+        commands: "M243.927 44.5795L250.449 68.9209C250.964 70.8413 252.938 71.981 254.858 71.4664C256.779 70.9519 257.918 68.9778 257.404 67.0574L250.881 42.716C250.367 40.7956 248.393 39.6559 246.472 40.1704C244.552 40.685 243.412 42.6591 243.927 44.5795Z";
+    }
+
+    Path {
+        fill: Theme.foreground;
+        viewbox-x: 0;
+        viewbox-y: 0;
+        viewbox-width: 648;
+        viewbox-height: 648;
+        commands: "M507.525 514.164L525.344 531.983C526.75 533.389 529.029 533.389 530.435 531.983C531.841 530.577 531.841 528.298 530.435 526.892L512.616 509.073C511.21 507.667 508.931 507.667 507.525 509.073C506.119 510.479 506.119 512.758 507.525 514.164Z";
+    }
+
+    Path {
+        fill: Theme.foreground;
+        viewbox-x: 0;
+        viewbox-y: 0;
+        viewbox-width: 648;
+        viewbox-height: 648;
+        commands: "M114.233 120.871L132.052 138.69C133.458 140.096 135.737 140.096 137.143 138.69C138.549 137.285 138.549 135.005 137.143 133.599L119.324 115.78C117.918 114.374 115.639 114.374 114.233 115.78C112.827 117.186 112.827 119.466 114.233 120.871Z";
+    }
+
+    Path {
+        fill: Theme.foreground;
+        viewbox-x: 0;
+        viewbox-y: 0;
+        viewbox-width: 648;
+        viewbox-height: 648;
+        commands: "M577.603 396.945L601.945 403.467C603.865 403.982 605.839 402.842 606.354 400.922C606.868 399.001 605.729 397.027 603.808 396.513L579.467 389.99C577.546 389.476 575.572 390.615 575.058 392.536C574.543 394.456 575.683 396.43 577.603 396.945Z";
+    }
+
+    Path {
+        fill: Theme.foreground;
+        viewbox-x: 0;
+        viewbox-y: 0;
+        viewbox-width: 648;
+        viewbox-height: 648;
+        commands: "M614.7 318.6H594.9C593.906 318.6 593.1 319.406 593.1 320.4C593.1 321.394 593.906 322.2 594.9 322.2H614.7C615.694 322.2 616.5 321.394 616.5 320.4C616.5 319.406 615.694 318.6 614.7 318.6Z";
+    }
+
+    Path {
+        fill: Theme.foreground;
+        viewbox-x: 0;
+        viewbox-y: 0;
+        viewbox-width: 648;
+        viewbox-height: 648;
+        commands: "M574.784 172.8L557.636 182.7C556.776 183.197 556.481 184.298 556.978 185.159C557.475 186.02 558.576 186.315 559.436 185.818L576.584 175.918C577.445 175.421 577.74 174.32 577.243 173.459C576.746 172.598 575.645 172.303 574.784 172.8Z";
+    }
+
+    Path {
+        fill: Theme.foreground;
+        viewbox-x: 0;
+        viewbox-y: 0;
+        viewbox-width: 648;
+        viewbox-height: 648;
+        commands: "M467.1 66.0163L457.2 83.1636C456.703 84.0245 456.998 85.1254 457.859 85.6224C458.72 86.1195 459.821 85.8245 460.318 84.9636L470.218 67.8163C470.715 66.9553 470.42 65.8545 469.559 65.3574C468.698 64.8604 467.597 65.1553 467.1 66.0163Z";
+    }
+
+    Path {
+        fill: Theme.foreground;
+        viewbox-x: 0;
+        viewbox-y: 0;
+        viewbox-width: 648;
+        viewbox-height: 648;
+        commands: "M320.4 27.9V47.7C320.4 48.6941 321.206 49.5 322.2 49.5C323.194 49.5 324 48.6941 324 47.7V27.9C324 26.9059 323.194 26.1 322.2 26.1C321.206 26.1 320.4 26.9059 320.4 27.9Z";
+    }
+
+    Path {
+        fill: Theme.foreground;
+        viewbox-x: 0;
+        viewbox-y: 0;
+        viewbox-width: 648;
+        viewbox-height: 648;
+        commands: "M174.6 67.8163L184.5 84.9636C184.997 85.8245 186.098 86.1195 186.959 85.6225C187.82 85.1254 188.115 84.0245 187.618 83.1636L177.718 66.0163C177.221 65.1554 176.12 64.8604 175.259 65.3575C174.398 65.8545 174.103 66.9554 174.6 67.8163Z";
+    }
+
+    Path {
+        fill: Theme.foreground;
+        viewbox-x: 0;
+        viewbox-y: 0;
+        viewbox-width: 648;
+        viewbox-height: 648;
+        commands: "M557.294 458.1L574.441 468C575.302 468.497 576.403 468.202 576.9 467.341C577.397 466.48 577.102 465.379 576.241 464.882L559.094 454.982C558.233 454.485 557.132 454.78 556.635 455.641C556.138 456.502 556.433 457.603 557.294 458.1Z";
+    }
+
+    Path {
+        fill: Theme.foreground;
+        viewbox-x: 0;
+        viewbox-y: 0;
+        viewbox-width: 648;
+        viewbox-height: 648;
+        commands: "M67.8164 175.5L84.9637 185.4C85.8247 185.897 86.9255 185.602 87.4226 184.741C87.9196 183.88 87.6247 182.779 86.7637 182.282L69.6164 172.382C68.7555 171.885 67.6546 172.18 67.1576 173.041C66.6605 173.902 66.9555 175.003 67.8164 175.5Z";
+    }
+
+    for tick in [0, 20, 40, 60, 80, 100, 120, 140, 160, 180]: Text {
+        x: center_x + 0.68 * root.radius * cos(tick_label_rotation(tick)) - 20px;
+        y: center_y + 0.72 * root.radius * sin(tick_label_rotation(tick)) - 5px;
+        text: tick;
+        font-size: 0.09 * root.radius;
+        font-weight: 600;
+        color: Theme.foreground;
+    }
+
+    img := Image {
+        width: root.size;
+        height: root.size;
+        vertical-alignment: center;
+        horizontal-alignment: center;
+        source: @image-url("assets/needle.svg");
+        rotation-angle: root.needle_rotation();
+    }
+
+    function needle_rotation() -> angle {
+        return ((360.0 - 90) * (root.speed / root.max-speed) - 58) * 1deg;
+    }
+    function tick_label_rotation(n: int) -> angle {
+        return ((360.0 - 100.0) * (n / root.max-speed) - 220.0) * 1deg;
+    }
+}

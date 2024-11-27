@@ -1,0 +1,17 @@
+import { Theme } from "theme.slint";
+import { Speedometer } from "speedometer.slint";
+import { Slider } from "std-widgets.slint";
+
+export component MainWindow inherits Window {
+    title: "Slint Dashboard";
+    min-width: 800px;
+    min-height: 600px;
+    background: #000000;
+
+    speedometer := Speedometer {
+        vertical-stretch: 1;
+        horizontal-stretch: 1;
+        max-speed: 180;
+        speed: 0;
+    }
+}

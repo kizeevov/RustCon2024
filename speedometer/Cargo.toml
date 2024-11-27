@@ -1,0 +1,3 @@
+[workspace]
+members = ["demo-egui", "demo-iced", "demo-slint"]
+resolver = "2"
